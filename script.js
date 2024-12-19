@@ -1,16 +1,19 @@
-//your JS code here. If required.
+// Create the function to return a promise that resolves with the array after 3 seconds
 function manipulateData() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve([1, 2, 3, 4]);
+      resolve([1, 2, 3, 4]); // Initial array
     }, 3000);
   });
 }
+
+// Function to update the text content of the #output element
 function updateOutput(text) {
   const output = document.getElementById('output');
-  output.textContent = text; 
+  output.textContent = text; // Update the content of the #output div
 }
 
+// Start the manipulation chain
 manipulateData()
   .then((array) => {
     // Step 1: Filter out odd numbers and display the result after 1 second
